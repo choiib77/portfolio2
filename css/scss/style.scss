@@ -131,19 +131,19 @@ $w375:375px;
 
 @font-face{
     font-family: "lemonmilk-bold";
-    src:url(../../font/LEMONMILK-Bold.woff2);
+    src:url(../font/LEMONMILK-Bold.woff2);
 }
 @font-face{
     font-family: "lemonmilk-light";
-    src:url(../../font/LEMONMILK-Light.woff2);
+    src:url(../font/LEMONMILK-Light.woff2);
 }
 @font-face{
     font-family: "lemonmilk-medium";
-    src:url(../../font/LEMONMILK-Medium.woff2);
+    src:url(../font/LEMONMILK-Medium.woff2);
 }
 @font-face{
     font-family: "lemonmilk-reqular";
-    src:url(../../font/LEMONMILK-Regular.woff2);
+    src:url(../font/LEMONMILK-Regular.woff2);
 }
 
 @mixin height($h){height: $h; line-height: calc($h - 1px);}
