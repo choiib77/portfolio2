@@ -691,18 +691,38 @@ index
                             >div{
                                 &.sec02_left1{
                                     h3{
-                                        @include faderight;
+                                        @include res--w1000{
+                                            @include faderight;
+                                        }
+                                        @include res--w991{
+                                            @include fadeInUp; transition-delay: .4s;
+                                        }
                                     }
                                     ul{
-                                        @include faderight; transition-delay: .1s;
+                                        @include res--w1000{
+                                            @include faderight; transition-delay: .1s;
+                                        }
+                                        @include res--w991{
+                                            @include fadeInUp; transition-delay: .4s;
+                                        }
                                     }
                                 }
                                 &.sec02_left2{
                                     h3{
-                                        @include faderight; transition-delay: .2s;
+                                        @include res--w1000{
+                                            @include faderight; transition-delay: .2s;
+                                        }
+                                        @include res--w991{
+                                            @include fadeInUp;  transition-delay: .6s;
+                                        }
                                     }
                                     ul{
-                                        @include faderight; transition-delay: .3s;
+                                        @include res--w1000{
+                                            @include faderight; transition-delay: .3s;
+                                        }
+                                        @include res--w991{
+                                            @include fadeInUp;  transition-delay: .6s;
+                                        }
                                     }
                                 }
                             }
@@ -721,10 +741,21 @@ index
                         }
                         .sec02_left{
                             h3{
-                                @include fadeLeft;; 
+                                @include res--w1000{
+                                    @include fadeLeft;
+                                }
+                                @include res--w991{
+                                    @include fadeInUp; 
+                                }
+                                
                             }
                             .sec02_desc{
-                                @include fadeLeft; transition-delay: .2s;
+                                @include res--w1000{
+                                    @include fadeLeft; transition-delay: .2s;
+                                }
+                                @include res--w991{
+                                    @include fadeInUp; transition-delay: .2s;
+                                }
                             }
                         }
                     }
@@ -904,7 +935,15 @@ index
                 }
                 .sec03_wrap{
                     .sec03_left{
+                        >span{
+                            @include res--w991{
+                                @include fadeInUp;
+                            }
+                        }
                         h2{
+                            @include res--w991{
+                                @include fadeInUp; animation-delay: .2s;
+                            }
                             >span{
                                 animation: waviy 1s; animation-delay: calc(.1s * var(--i)); 
                             }
@@ -917,6 +956,11 @@ index
                                         animation: waviy 1s; animation-delay: calc(.1s * var(--i)); animation-iteration-count:infinite;
                                     }
                                 }
+                            }
+                        }
+                        p{
+                            @include res--w991{
+                                @include fadeInUp; animation-delay: .4s;
                             }
                         }
                     }
@@ -989,7 +1033,10 @@ index
                         width: calc(100% - 18%); padding: 10% 10% 10% 7%;
                     }
                     >span{
-                        @include font-lere; font-size: 1.6rem; opacity: .5; display: inline-block; margin-bottom: 10px;
+                        @include font-lere; font-size: 1.6rem; color: #b9b8b8; display: inline-block; margin-bottom: 10px;
+                        @include res--w991{
+                            @include fadeInUp_prev;
+                        }
                         @include res--w480{
                             font-size: 1.4rem;
                         }
@@ -1000,7 +1047,7 @@ index
                             font-size: 5rem; margin-bottom: 4%;
                         }
                         @include res--w991{
-                            font-size: 4rem;
+                            font-size: 4rem; @include fadeInUp_prev;
                         }
                         @include res--w480{
                             font-size: 3rem;
@@ -1042,7 +1089,7 @@ index
                             font-size: 1.6rem;
                         }
                         @include res--w991{
-                            font-size: 1.5rem;
+                            font-size: 1.5rem;  @include fadeInUp_prev;
                         }
                         @include res--w480{
                             font-size: 1.4rem; line-height: 1.4;

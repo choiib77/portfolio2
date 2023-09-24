@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     disableScroll(); // 스크롤 비활성화
     // 스크롤 휠 막기 
     document.body.addEventListener('wheel', preventScroll, { passive: false });
+    // pc너비일 때 텍스트 위치 변경
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (screenWidth >= 991) {
+        sec01_h1.style.transform = "translateY(-20%)";
+    }
+
     // 10초 후에 overlay 사라짐
     setTimeout(function () {
         overlay.style.animation = "none"; 
