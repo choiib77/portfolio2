@@ -197,7 +197,7 @@ index
   width: 100%;
   height: 100%;
   background-color: #F3F3F3;
-  z-index: 100;
+  z-index: 101;
   animation: overlayon 2s linear 8s forwards;
 }
 
@@ -586,8 +586,8 @@ index
 }
 @media (max-width: 580px) {
   #index_wrapper .container_wide .section2 .scrolling-text .scrolling-text-content {
-    font-size: 6rem;
-    -webkit-text-stroke: 2px #999;
+    font-size: 4rem;
+    -webkit-text-stroke: 1px #999;
   }
 }
 #index_wrapper .container_wide .section2.ani .sec02_cont_wrap {
@@ -1162,6 +1162,11 @@ index
     font-size: 4rem;
   }
 }
+@media screen and (max-width: 480px) {
+  #index_wrapper .container_wide .section3 .sec03_wrap .sec03_left h2 {
+    font-size: 3rem;
+  }
+}
 #index_wrapper .container_wide .section3 .sec03_wrap .sec03_left h2 > span {
   position: relative;
   display: inline-block;
@@ -1185,12 +1190,22 @@ index
     font-size: 4.5rem;
   }
 }
+@media screen and (max-width: 480px) {
+  #index_wrapper .container_wide .section3 .sec03_wrap .sec03_left h2 b {
+    font-size: 3.5rem;
+  }
+}
 #index_wrapper .container_wide .section3 .sec03_wrap .sec03_left h2 b.waviy {
   letter-spacing: -0.85rem;
 }
 @media screen and (max-width: 991px) {
   #index_wrapper .container_wide .section3 .sec03_wrap .sec03_left h2 b.waviy {
     letter-spacing: -0.45rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #index_wrapper .container_wide .section3 .sec03_wrap .sec03_left h2 b.waviy {
+    letter-spacing: -0.35rem;
   }
 }
 #index_wrapper .container_wide .section3 .sec03_wrap .sec03_left h2 b.waviy span {
@@ -1855,6 +1870,7 @@ index
   opacity: 0;
   transition: all 0.7s;
   transition-timing-function: linear;
+  color: #333;
 }
 @media screen and (max-width: 1510px) {
   #index_wrapper .container_wide .section4 > div .sec04_right button {

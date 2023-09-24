@@ -414,7 +414,7 @@ index
 }
 // 로드 애니메이션
 .overlay{
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;background-color: #F3F3F3; z-index: 100; animation: overlayon 2s linear 8s forwards; 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;background-color: #F3F3F3; z-index: 101; animation: overlayon 2s linear 8s forwards; 
 }
 // 본문
 #index_wrapper{
@@ -671,7 +671,7 @@ index
                         font-size: 8rem
                     }
                     @include responsive(580px){
-                        font-size: 6rem;  -webkit-text-stroke:2px #999;
+                        font-size: 4rem;  -webkit-text-stroke:1px #999;
                     }
                 }
             }   
@@ -1002,6 +1002,9 @@ index
                         @include res--w991{
                             font-size: 4rem;
                         }
+                        @include res--w480{
+                            font-size: 3rem;
+                        }
                         >span{
                             position: relative; display: inline-block;
                         }
@@ -1016,10 +1019,16 @@ index
                             @include res--w991{
                                 font-size: 4.5rem;
                             }
+                            @include res--w480{
+                                font-size: 3.5rem;
+                            }
                             &.waviy{
                                 letter-spacing: -0.85rem; 
                                 @include res--w991{
                                     letter-spacing: -0.45rem;
+                                }
+                                @include res--w480{
+                                    letter-spacing: -0.35rem;
                                 }
                                 span{
                                     position: relative; display: inline-block; animation-iteration-count:infinite;
@@ -1378,7 +1387,7 @@ index
                     }
                     button{
                         @include font-pre; font-size: 6rem; font-weight: 400; margin: 0;
-                        transition: color .3s; position: relative; border: 0; background: transparent; @include fadeInUp_prev;
+                        transition: color .3s; position: relative; border: 0; background: transparent; @include fadeInUp_prev; color: #333;
                         @include res--w1510{
                             font-size: 5rem;
                         }

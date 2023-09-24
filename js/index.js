@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //     index_wrapper.style.opacity = "0"; 
     //     document.body.classList.add("overlay-active");
     // });
-    
     disableScroll(); // 스크롤 비활성화
+    // 스크롤 휠 막기 
+    document.body.addEventListener('wheel', preventScroll, { passive: false });
     // 10초 후에 overlay 사라짐
     setTimeout(function () {
         overlay.style.animation = "none"; 
@@ -40,6 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// 스크롤 휠 이벤트를 막는 함수
+function preventScroll(event) {
+    event.preventDefault();
+}
+
 // 스크롤 비활성화 함수
 function disableScroll() {
     // 현재 스크롤 위치 저장
@@ -57,6 +63,7 @@ function disableScroll() {
 function enableScroll() {
     document.body.style.overflow = "auto";
     window.onscroll = function () {};
+    document.body.removeEventListener('wheel', preventScroll);
 }
 
 // 커서포인트
