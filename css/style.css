@@ -59,7 +59,7 @@ html, body {
 }
 @media screen and (max-width: 991px) {
   html, body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 }
 
@@ -70,7 +70,7 @@ body {
 }
 @media screen and (max-width: 991px) {
   body {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 }
 
@@ -1653,6 +1653,7 @@ index
   flex-direction: column;
   padding-left: 4%;
   padding-top: 3%;
+  overflow: hidden;
 }
 @media screen and (max-width: 1380px) {
   #index_wrapper .container_wide .section3 .sec03_wrap .sec03_right .sec03_cont_box_wrap .sec03_cont_box a .txt_box {
