@@ -744,17 +744,10 @@ index
                                 @include res--w1000{
                                     @include fadeLeft;
                                 }
-                                @include res--w991{
-                                    @include fadeInUp; 
-                                }
-                                
                             }
                             .sec02_desc{
                                 @include res--w1000{
                                     @include fadeLeft; transition-delay: .2s;
-                                }
-                                @include res--w991{
-                                    @include fadeInUp; transition-delay: .2s;
                                 }
                             }
                         }
@@ -856,7 +849,10 @@ index
                             width: auto;
                         }
                         h3{
-                            font-size: 2rem; color: #333; @include font-lere; text-transform: uppercase; @include fadeInleft_prev; position: relative;
+                            font-size: 2rem; color: #333; @include font-lere; text-transform: uppercase;position: relative;
+                            @include res--w1000{
+                                @include fadeInleft_prev; 
+                            }
                             @include res--w1510{
                                 font-size: 1.8rem;
                             }
@@ -864,14 +860,20 @@ index
                                 font-size: 2rem;
                             }
                             @include res--w991{
-                                font-size: 2.2rem
+                                font-size: 2.2rem; animation: fadeInUp 1s; animation-delay: 3s; 
                             }
                             @include res--w480{
                                 font-size: 1.8rem;
                             }
                         }
                         .sec02_desc{
-                            @include fadeInleft_prev; position: relative; 
+                            position: relative; 
+                            @include res--w1000{
+                                @include fadeInleft_prev;
+                            }
+                            @include res--w991{
+                                animation: fadeInUp 1s; animation-delay: 3s; 
+                            }
                             p{
                                 font-size: 2rem; @include font-pre; line-height: 1.5;
                                 @include res--w1510{

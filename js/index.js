@@ -92,7 +92,6 @@ $.each(sec03_a, function(i, item){
 // 메인 애니메이션 
 var lastScrollPos = window.pageYOffset;
 window.addEventListener('scroll', function() {
-    
     var scrollY =  window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     var innerHeight = window.innerHeight;
     var scrollHeight = document.body.offsetHeight;
