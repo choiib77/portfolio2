@@ -708,6 +708,11 @@ index
   height: 18vw;
   transition: all 1s ease-in-out;
 }
+@media screen and (min-width: 1921px) {
+  #index_wrapper .container_wide .section2.ani > div .sec02_box_wrap .line_h {
+    height: 33rem;
+  }
+}
 @media screen and (max-width: 1720px) {
   #index_wrapper .container_wide .section2.ani > div .sec02_box_wrap .line_h {
     height: 20vw;
@@ -1107,6 +1112,12 @@ index
   visibility: hidden;
   transition: all 0.3s;
   z-index: 3;
+}
+@media screen and (min-width: 1921px) {
+  #index_wrapper .container_wide .section3 .sec03_cont {
+    bottom: 30rem;
+    right: -16rem;
+  }
 }
 @media (max-width: 1830px) {
   #index_wrapper .container_wide .section3 .sec03_cont {

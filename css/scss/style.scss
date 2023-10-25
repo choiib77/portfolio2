@@ -2,7 +2,7 @@
 // 모바일 반응형 브레이크포인트
 // Break Point
 
-$w1920:1920px;
+$w1920:1921px;
 @mixin res--w1920{
     @media screen and (min-width: #{$w1920}){
 		@content;
@@ -729,6 +729,9 @@ index
                         }
                         .line_h{
                             height: 18vw; transition: all 1s ease-in-out;
+                            @include res--w1920{
+                                height: 33rem;
+                            }
                             @include res--w1720{
                                 height: 20vw;
                             }
@@ -970,6 +973,9 @@ index
             }
             .sec03_cont{
                 position: fixed; bottom: 15vw; right: -9vw; transform: rotate(90deg);   transition: all 1s ease-in-out; margin-bottom: -10%; @include hidden; z-index: 3;
+                @include res--w1920{
+                    bottom: 30rem; right: -16rem;
+                }
                 @include responsive(1830px){
                     right: -13rem;
                 }
