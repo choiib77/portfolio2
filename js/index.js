@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sec01_h1.classList.add('active');
         document.body.classList.remove("overlay-active"); 
         enableScroll(); // 스크롤 활성화
-    }, 3500); // 10초 (10000 밀리초) 후에 함수 실행
+    }, 3500); // 10초 후에 함수 실행
     // 텍스트 애니메이션
     textElements.forEach((textElement, index) => {
         setTimeout(function () {
@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// 스크롤 휠 이벤트를 막는 함수
+// 스크롤 휠 이벤트를 막음
 function preventScroll(event) {
     event.preventDefault();
 }
 
-// 스크롤 비활성화 함수
+// 스크롤 비활성화
 function disableScroll() {
     // 현재 스크롤 위치 저장
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -65,7 +65,7 @@ function disableScroll() {
     };
 }
 
-// 스크롤 활성화 함수
+// 스크롤 활성화
 function enableScroll() {
     document.body.style.overflow = "auto";
     window.onscroll = function () {};
@@ -155,7 +155,7 @@ window.addEventListener('scroll', function() {
 // 타이핑 효과 
 const $text = document.querySelector(".typing");
 
-// 글자 모음 - 개행문자(\n)로 줄바꿈
+// 줄바꿈
 const letters = [
   "Let’s \n work \n together"
 ];
@@ -203,7 +203,7 @@ const remove = async () => {
   typing();
 }
 
-// 딜레이 기능 ( 마이크로초 )
+// 딜레이 기능
 function wait(ms) {
   return new Promise(res => setTimeout(res, ms))
 }
