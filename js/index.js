@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sec01_h1.style.transform = "translateY(-20%)";
     }
 
-    // 10초 후에 overlay 사라짐
+    // overlay 사라짐
     setTimeout(function () {
         overlay.style.animation = "none"; 
         sec01_tit.style.animation = "none";
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sec01_h1.classList.add('active');
         document.body.classList.remove("overlay-active"); 
         enableScroll(); // 스크롤 활성화
-    }, 3500); // 10초 후에 함수 실행
+    }, 3500); 
     // 텍스트 애니메이션
     textElements.forEach((textElement, index) => {
         setTimeout(function () {
@@ -147,9 +147,9 @@ window.addEventListener('scroll', function() {
         topButton.style.bottom = '-10rem';
       } else { // 마우스 휠 올리면 버튼 보이기
         topButton.style.bottom = '0';
-      }
-    
-      lastScrollPos = currentScrollPos;
+    }
+
+    lastScrollPos = currentScrollPos;
 })
 
 // 타이핑 효과 
@@ -157,7 +157,7 @@ const $text = document.querySelector(".typing");
 
 // 줄바꿈
 const letters = [
-  "Let’s \n work \n together"
+    "Let’s \n work \n together"
 ];
 
 // 글자 입력 속도
@@ -166,41 +166,39 @@ let i = 0;
 
 // 줄바꿈을 위한 <br> 치환
 const changeLineBreak = (letter) => {
-  return letter.map(text => text === "\n" ? "<br>" : text);
+    return letter.map(text => text === "\n" ? "<br>" : text);
 }
 
 // ** 타이핑 효과
 const typing = async () => {  
-  // 기존코드에서 개행치환코드 추가
-  const letter = changeLineBreak(letters[i].split(""));
-  
-  while (letter.length) {
-    await wait(speed);
-    $text.innerHTML += letter.shift(); 
-  }
-  
-  // 잠시 대기
-  await wait(800);
-  
-  // 지우는 효과
-  remove();
+    const letter = changeLineBreak(letters[i].split(""));
+    
+    while (letter.length) {
+        await wait(speed);
+        $text.innerHTML += letter.shift(); 
+    }
+    
+    // 잠시 대기
+    await wait(800);
+    
+    // 지우는 효과
+    remove();
 }
 
 // 글자 지우는 효과
 const remove = async () => {
-  // 기존코드에서 개행치환코드 추가
-  const letter = changeLineBreak(letters[i].split(""));
-  
-  while (letter.length) {
-    await wait(speed);
+    const letter = changeLineBreak(letters[i].split(""));
     
-    letter.pop();
-    $text.innerHTML = letter.join(""); 
-  }
-  
-  // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
-  i = !letters[i+1] ? 0 : i + 1;
-  typing();
+    while (letter.length) {
+        await wait(speed);
+        
+        letter.pop();
+        $text.innerHTML = letter.join(""); 
+    }
+    
+    // 타이핑 함수 다시 실행
+    i = !letters[i+1] ? 0 : i + 1;
+    typing();
 }
 
 // 딜레이 기능
